@@ -1,2 +1,12 @@
-# ano-novo-2026
-Projeto de Ano Novo desenvolvido com HTML e CSS
+# 🎆 Projeto Ano Novo 2026
+
+Projeto simples desenvolvido com **HTML e CSS** para celebrar a virada do ano.
+
+## 🛠 Tecnologias
+- HTML5
+- CSS3
+
+## 🎯 Objetivo
+Praticar estrutura HTML, estilização com CSS e organização de projetos.
+
+
