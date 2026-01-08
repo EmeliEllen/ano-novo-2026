@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap');
+
+body{
+    background-image: url(../imagens/fundo.png);
+}
+
+h1{
+    display: block; /*forma um bloco no elemento*/
+    text-align: center; /*centraliza*/
+    font-size: 48px;             /* tamanho da letra */
+    color: #ffd700; /* Define a cor do texto.
+   #ffd700 é um tom de dourado (gold), muito usado para Ano Novo */
+
+    text-shadow:
+         0 0 8px #ffd700,  /* Primeira sombra:
+       0 → não desloca na horizontal
+       0 → não desloca na vertical
+       6px → nível de desfoque (quanto maior, mais suave)
+       #ffd700 → cor da sombra (dourado) */
+
+      0 0 16px rgba(255, 215, 0, 0.6);/* Segunda sombra:
+   0 → sem deslocamento horizontal
+   0 → sem deslocamento vertical
+   12px → desfoque maior, criando um brilho mais espalhado
+   #ffcc00 → dourado mais claro para dar efeito de luz */
+    animation: brilho 3s infinite alternate;
+   
+}
+
+@keyframes brilho {
+    from { text-shadow: 0 0 10px #ffd700; }
+    to   { text-shadow: 0 0 25px #ffd700; }
+}
+
+
+p{
+    display: block;  /*forma um bloco no elemento*/
+    text-align: center; /*centraliza*/
+    color: white;
+    font-size: 13pt;
+    font-family: 'Playfair Display', serif;
+    margin-top: 10px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.6);
+
+}
+
+
+p.primeiramensagem{
+    font-size: 18pt;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+.frase {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.frase p {
+    font-size: 1.3em;
+    color: #e6e6e6;
+    margin-bottom: 15px;
+}
+
+.linha-decorativa {
+    width: 500px; /* largura da linha */
+    height: 2px;  /* espessura da linha */
+    background: linear-gradient(to right, transparent, #d4af37, transparent);  /* cria o efeito de linha dourada que some nas laterais */
+    margin: 0 auto;  /* centraliza a linha na tela */
+    position: relative; /* permite posicionar o detalhe (pontinhos) dentro dela */
+}
+
+.linha-decorativa::before {
+    content: "✦ ✦ ✦"; 
+    /* símbolo decorativo no centro da linha */
+    position: absolute; 
+    /* posiciona livremente dentro da linha */
+    top: -10px; 
+    /* sobe o símbolo um pouco acima da linha */
+    left: 50%; 
+    /* move o símbolo para o meio */
+    transform: translateX(-50%); 
+    /* centraliza exatamente no meio */
+    color: #d4af37; 
+    /* cor dourada do símbolo */
+    font-size: 14px; 
+    /* tamanho do símbolo */
+    background-color: transparent;
+    /* garante que não tenha fundo */
+}
+
+
+div.foto-fogos{
+      text-align: center;  /* centraliza o conteúdo INLINE dentro da div (a imagem) */
+      display: flex; /*ativa flexbox dentro da div da imagem*/ 
+      justify-content: center; /* centraliza na horizontal */
+      margin-top: 20px; /*afasta imagem do topo*/
+        
+      
+}
+
+div.foto-fogos img{
+    width: 30%; /*tamanho da imagem*/
+    height: auto; /* ajusta a altura automaticamente para não distorcer */
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+    border: 2px solid rgba(255,255,255,0.2);
+}
+    
+
+footer#rodape{
+    border: 1px solid #606060;
+    position: fixed;   /* fixa o footer na tela */
+    bottom: 0;         /* cola no fundo da tela */
+    left: 0;           /* encosta na esquerda */
+    width: 100%;       /* ocupa toda a largura */
+    text-align: center; /* centraliza o texto dentro do footer */
+    background: rgba(0, 0, 0, 0.1);; /* define a cor de fundo do footer */
+    color: white;
+    padding: 10px; /* cria um espaço interno entre o texto e as bordas */
+    opacity: 0.8;
+    font-size: 0.9em;
+}
+
+    
+
